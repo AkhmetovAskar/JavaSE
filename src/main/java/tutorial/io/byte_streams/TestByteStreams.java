@@ -27,7 +27,7 @@ public class TestByteStreams {
             in = new FileInputStream(file);
             out = new FileOutputStream(fileCopy);
             int c;
-            //читаем из исходного файла по одному байту и пишет также по одному байту в другой файл
+            //читает из исходного файла по одному байту и пишет также по одному байту в другой файл
             while ((c = in.read()) != -1) {
                 out.write(c);
             }
