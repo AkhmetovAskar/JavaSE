@@ -1,4 +1,4 @@
-package tutorial.io.сharacter_streams;
+package tutorial.io;
 
 import java.io.File;
 import java.io.FileReader;
@@ -9,8 +9,7 @@ import java.net.URL;
 /**
  * Пример работы с символьными потоками
  * Все символьные потоки наследуются от абстрактных классов Reader и Writer.
- * * Потоки нужно обязательно закрывать
- *
+ * Потоки нужно обязательно закрывать
  */
 public class TestCharacterStreams {
     public static void main(String[] args) throws IOException {

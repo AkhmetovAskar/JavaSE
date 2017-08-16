@@ -1,4 +1,4 @@
-package tutorial.io.byte_streams;
+package tutorial.io;
 
 import java.io.File;
 import java.io.FileInputStream;
