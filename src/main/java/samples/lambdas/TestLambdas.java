@@ -1,4 +1,4 @@
-package tutorial.lambdas;
+package samples.lambdas;
 
 import java.util.Arrays;
 import java.util.HashSet;

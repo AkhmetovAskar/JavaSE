@@ -1,4 +1,4 @@
-package tutorial.generics;
+package samples.generics;
 
 public class TestGenerics {
 

@@ -1,4 +1,4 @@
-package tutorial.io;
+package samples.io;
 
 import java.io.File;
 import java.io.FileInputStream;

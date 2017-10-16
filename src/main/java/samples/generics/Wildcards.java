@@ -1,4 +1,4 @@
-package tutorial.generics;
+package samples.generics;
 
 /**
  * Created by askar on 12.06.2017.

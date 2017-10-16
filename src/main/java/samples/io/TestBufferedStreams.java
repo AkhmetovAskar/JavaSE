@@ -1,4 +1,4 @@
-package tutorial.io;
+package samples.io;
 
 import java.io.*;
 import java.net.URL;
