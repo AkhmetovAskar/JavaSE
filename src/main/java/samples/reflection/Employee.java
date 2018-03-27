@@ -11,4 +11,12 @@ public class Employee {
         this.name = name;
         this.salary = salary;
     }
+
+    public void printSomething() {
+        System.out.println("something");
+    }
+
+    public void printParameter(int param) {
+        System.out.println("param = " + param);
+    }
 }

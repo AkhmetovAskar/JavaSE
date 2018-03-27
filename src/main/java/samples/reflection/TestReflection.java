@@ -1,9 +1,6 @@
 package samples.reflection;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.*;
 import java.util.Date;
 
 public class TestReflection {
@@ -25,13 +22,17 @@ public class TestReflection {
 
         Employee employee = new Employee("Askar", 100_000);
         try {
-            Field field = employee.getClass().getDeclaredField("name");
+            Field field = Employee.class.getDeclaredField("name");
             field.setAccessible(true);
             Object v = field.get(employee);
             System.out.println("Old value : " + v);
             field.set(employee, "Petya");
             System.out.println("New value : " + field.get(employee));
-        } catch (NoSuchFieldException | IllegalAccessException e) {
+            Method method = Employee.class.getDeclaredMethod("printSomething");
+            method.invoke(employee);
+            Method method2 = Employee.class.getDeclaredMethod("printParameter", int.class);
+            method2.invoke(employee, 19);
+        } catch (NoSuchFieldException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
             e.printStackTrace();
         }
     }
