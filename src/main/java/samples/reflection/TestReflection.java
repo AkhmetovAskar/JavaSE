@@ -18,8 +18,9 @@ public class TestReflection {
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        printClass("java.util.Date");
+        printClass("samples.reflection.Employee");
 
+        System.out.println("==================");
         Employee employee = new Employee("Askar", 100_000);
         try {
             Field field = Employee.class.getDeclaredField("name");
@@ -46,6 +47,7 @@ public class TestReflection {
                     .append(' ')
                     .append("class ")
                     .append(cl.getName())
+                    .append(getTypeParametersString(cl.getTypeParameters()))
                     .append(supercl != null && supercl != Object.class ? " extends " + supercl.getName() : "")
                     .append(" {\n");
             System.out.println(sb.toString());
@@ -59,6 +61,19 @@ public class TestReflection {
         }
     }
 
+    public static String getTypeParametersString(TypeVariable<?>[] typeParameters) {
+        StringBuilder sb = new StringBuilder();
+        if (typeParameters.length > 0) {
+            sb.append('<');
+            for (TypeVariable<?> type : typeParameters) {
+                sb.append(type.getName()).append(',');
+            }
+            sb.deleteCharAt(sb.toString().length()-1);
+            sb.append('>');
+        }
+        return sb.toString();
+    }
+
     public static void printConstructors(Class<?> cl) {
         Constructor<?>[] constructors = cl.getDeclaredConstructors();
         for (Constructor<?> c : constructors) {
@@ -70,7 +85,9 @@ public class TestReflection {
                     .append('(');
             Class<?>[] parameterTypes = c.getParameterTypes();
             for (Class<?> parameterType : parameterTypes) {
-                sb.append(parameterType.getName()).append(',');
+                sb.append(parameterType.getName())
+                        .append(getTypeParametersString(parameterType.getTypeParameters()))
+                        .append(',');
             }
             if (parameterTypes.length > 0) sb.deleteCharAt(sb.toString().length()-1);
             sb.append(");");
@@ -91,7 +108,9 @@ public class TestReflection {
                     .append('(');
             Class<?>[] parameterTypes = m.getParameterTypes();
             for (Class<?> parameterType : parameterTypes) {
-                sb.append(parameterType.getName()).append(',');
+                sb.append(parameterType.getName())
+                        .append(getTypeParametersString(parameterType.getTypeParameters()))
+                        .append(',');
             }
             if (parameterTypes.length > 0) sb.deleteCharAt(sb.toString().length()-1);
             sb.append(");");
@@ -106,8 +125,8 @@ public class TestReflection {
             sb.append("\t")
                     .append(Modifier.toString(f.getModifiers()))
                     .append(' ')
-                    .append(f.getType().getName())
-                    .append(' ')
+                    .append(f.getType().getName());
+            sb.append(' ')
                     .append(f.getName())
                     .append(';');
             System.out.println(sb.toString());

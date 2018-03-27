@@ -1,8 +1,11 @@
 package samples.reflection;
 
+import java.util.List;
+
 public class Employee {
     private String name;
     private double salary;
+    private List<String> list;
 
     public Employee() {
     }
