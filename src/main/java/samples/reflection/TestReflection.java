@@ -125,7 +125,7 @@ public class TestReflection {
             sb.append("\t")
                     .append(Modifier.toString(f.getModifiers()))
                     .append(' ')
-                    .append(f.getType().getName());
+                    .append(f.getGenericType().getTypeName());
             sb.append(' ')
                     .append(f.getName())
                     .append(';');
