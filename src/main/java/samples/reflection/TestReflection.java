@@ -83,13 +83,13 @@ public class TestReflection {
                     .append(' ')
                     .append(c.getName())
                     .append('(');
-            Class<?>[] parameterTypes = c.getParameterTypes();
-            for (Class<?> parameterType : parameterTypes) {
-                sb.append(parameterType.getName())
-                        .append(getTypeParametersString(parameterType.getTypeParameters()))
+            Class<?>[] parameters = c.getParameterTypes();
+            for (Class<?> parameter : parameters) {
+                sb.append(parameter.getName())
+                        .append(getTypeParametersString(parameter.getTypeParameters()))
                         .append(',');
             }
-            if (parameterTypes.length > 0) sb.deleteCharAt(sb.toString().length()-1);
+            if (parameters.length > 0) sb.deleteCharAt(sb.toString().length()-1);
             sb.append(");");
             System.out.println(sb.toString());
         }
@@ -106,13 +106,13 @@ public class TestReflection {
                     .append(' ')
                     .append(m.getName())
                     .append('(');
-            Class<?>[] parameterTypes = m.getParameterTypes();
-            for (Class<?> parameterType : parameterTypes) {
-                sb.append(parameterType.getName())
-                        .append(getTypeParametersString(parameterType.getTypeParameters()))
+            Class<?>[] parameters = m.getParameterTypes();
+            for (Class<?> parameter : parameters) {
+                sb.append(parameter.getName())
+                        .append(getTypeParametersString(parameter.getTypeParameters()))
                         .append(',');
             }
-            if (parameterTypes.length > 0) sb.deleteCharAt(sb.toString().length()-1);
+            if (parameters.length > 0) sb.deleteCharAt(sb.toString().length()-1);
             sb.append(");");
             System.out.println(sb.toString());
         }
