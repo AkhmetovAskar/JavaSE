@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjuster;
 
 public class TestDateTime {
     public static void main(String[] args) {
@@ -21,5 +22,8 @@ public class TestDateTime {
         System.out.println("months total : " + ChronoUnit.MONTHS.between(myBirthday, today));
         System.out.println("days total : " + ChronoUnit.DAYS.between(myBirthday, today));
         System.out.println("days total 2 : " + myBirthday.until(today, ChronoUnit.DAYS));
+        TemporalAdjuster tommorowAdjuster = t -> t.plus(1, ChronoUnit.DAYS);
+        LocalDate tommorow = today.with(tommorowAdjuster);
+        System.out.println(tommorow);
     }
 }
