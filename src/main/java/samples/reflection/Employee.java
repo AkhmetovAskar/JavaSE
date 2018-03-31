@@ -1,11 +1,13 @@
 package samples.reflection;
 
 import java.util.List;
+import java.util.Map;
 
 public class Employee {
     private String name;
     private double salary;
     private List<String> list;
+    private Map<String, Integer> map;
 
     public Employee() {
     }
