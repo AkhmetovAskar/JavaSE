@@ -5,6 +5,9 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjuster;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Locale;
 
 public class TestDateTime {
@@ -31,5 +34,11 @@ public class TestDateTime {
         System.out.println("ZonedDateTime : " + nowZoned);
         DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
         System.out.println("Formatter : " + formatter.withLocale(Locale.getDefault()).format(nowZoned));
+        Date date = new Date();
+        System.out.println("java.util.Date to Instant : " + date.toInstant());
+        System.out.println("Instant to java.util.Date : " + Date.from(now));
+        GregorianCalendar calendar = (GregorianCalendar) Calendar.getInstance();
+        System.out.println("GregorianCalendar to ZonedDateTime : " + calendar.toZonedDateTime());
+        System.out.println("ZonedDateTime to GregorianCalendar : " + GregorianCalendar.from(nowZoned));
     }
 }
