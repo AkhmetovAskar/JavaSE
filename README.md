@@ -1,2 +1,2 @@
-# Java SE
-Проект содержит примеры использования Java SE.
+# Java
+Project for learning Java SE, libs and other tools
