@@ -1,2 +1,2 @@
-# Java
-Project for learning Java SE, libs and other tools
+# LearnJava
+Project for learning Java, libs, tools and etc.
