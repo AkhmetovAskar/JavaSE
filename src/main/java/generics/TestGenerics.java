@@ -1,4 +1,4 @@
-package samples.generics;
+package generics;
 
 public class TestGenerics {
 

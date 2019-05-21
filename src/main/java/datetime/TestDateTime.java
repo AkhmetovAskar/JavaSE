@@ -1,4 +1,4 @@
-package samples.date_time_api;
+package datetime;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;

@@ -1,4 +1,4 @@
-package samples.nio;
+package nio;
 
 import java.io.IOException;
 import java.nio.file.Files;

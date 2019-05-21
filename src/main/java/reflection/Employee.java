@@ -1,4 +1,4 @@
-package samples.reflection;
+package reflection;
 
 import java.util.List;
 import java.util.Map;
