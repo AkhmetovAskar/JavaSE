@@ -1,4 +1,4 @@
-package reflection;
+package javase.reflection;
 
 import java.util.List;
 import java.util.Map;

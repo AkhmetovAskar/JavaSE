@@ -1,4 +1,4 @@
-package generics;
+package javase.generics;
 
 public class TestGenerics {
 

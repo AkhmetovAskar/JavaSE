@@ -1,4 +1,4 @@
-package nio;
+package javase.nio;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -40,7 +40,7 @@ public class TestPath {
         Path test = Paths.get("test.txt");
         //toAbsolutePath прибавит спереди рабочую директорию, откуда запускается класс
         System.out.format("toAbsolutePath : %s%n", test.toAbsolutePath());
-        //А такой вызов выбросит java.nio.file.NoSuchFileException
+        //А такой вызов выбросит java.javase.nio.file.NoSuchFileException
         //System.out.format("toRealPath : %s%n", test.toRealPath());
 
         //Пути можно соединять

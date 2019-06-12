@@ -1,4 +1,4 @@
-package collections;
+package javase.collections;
 
 import java.util.Arrays;
 

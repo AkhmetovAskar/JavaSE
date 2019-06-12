@@ -1,4 +1,4 @@
-package stream;
+package javase.stream;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class TestStream {
         Optional<Integer> maxVal = myStream.max(Integer::compare);
         if(maxVal.isPresent()) System.out.println("Maximum value: " + maxVal.get());
         Stream<Integer> sortedStream = myList.stream().sorted();
-        System.out.print("Sorted stream: ");
+        System.out.print("Sorted javase.stream: ");
         sortedStream.forEach(n -> System.out.print(n + " "));
         System.out.println();
         Stream<Integer> oddVals = myList.stream().sorted().filter(n -> (n % 2) == 1);

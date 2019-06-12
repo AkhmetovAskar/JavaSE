@@ -1,4 +1,4 @@
-package reflection;
+package javase.reflection;
 
 import java.lang.reflect.*;
 import java.util.Date;
@@ -18,7 +18,7 @@ public class TestReflection {
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        printClass("reflection.Employee");
+        printClass("javase.reflection.Employee");
 
         System.out.println("==================");
         Employee employee = new Employee("Askar", 100_000);

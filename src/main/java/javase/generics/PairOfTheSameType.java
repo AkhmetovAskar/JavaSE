@@ -1,4 +1,4 @@
-package generics;
+package javase.generics;
 
 /**
  * Created by askar on 04.06.2017.
