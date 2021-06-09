@@ -1,2 +1,2 @@
 # java-sandbox
-Sandbox project for improving skills in Java Core
+Sandbox project for improving skills in Java
